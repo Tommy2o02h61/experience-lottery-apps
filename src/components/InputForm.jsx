@@ -11,7 +11,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
     return (
         <div className="w-full max-w-6xl p-2 animate-fade-in-up">
             <h2 className="text-3xl font-bold text-slate-800 text-center mb-10 drop-shadow-sm tracking-widest">
-                EXPERIENCE LOTTERY <span className="text-sm font-normal text-slate-500 block mt-2">v1.2</span>
+                EXPERIENCE LOTTERY <span className="text-sm font-normal text-slate-500 block mt-2">v1.3</span>
             </h2>
 
             {/* 
@@ -34,7 +34,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                             <button
                                 key={mood.id}
                                 onClick={() => handleChange('mood', mood.id)}
-                                className={`py-3 md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.mood === mood.id
+                                className={`py-8 md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.mood === mood.id
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
@@ -55,7 +55,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                             <button
                                 key={time.id}
                                 onClick={() => handleChange('time', time.id)}
-                                className={`py-3 md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.time === time.id
+                                className={`py-8 md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.time === time.id
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
@@ -76,7 +76,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                             <button
                                 key={location.id}
                                 onClick={() => handleChange('location', location.id)}
-                                className={`py-3 md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.location === location.id
+                                className={`py-8 md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.location === location.id
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
@@ -93,15 +93,15 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                     onClick={onStart}
                     disabled={!isFormValid}
                     className={`
-             w-[90%] md:w-[32%] min-w-[300px]
-             py-6 md:py-6
-            rounded-full font-bold text-3xl md:text-4xl
+             w-[54%] md:w-[32%] min-w-[180px]
+             py-4 md:py-6
+            rounded-full font-bold text-xl md:text-4xl
             shadow-xl transition-all duration-300 transform border-4 tracking-widest
             ${isFormValid
                             ? 'bg-[#FFDAB8] text-slate-900 border-[#FFB978] hover:bg-[#FFB978] hover:text-white hover:scale-[1.02] hover:-translate-y-1'
                             : 'bg-white/50 text-slate-300 border-slate-200 cursor-not-allowed'
                         }`}
-                    style={{ minHeight: '85px' }}
+                    style={{ minHeight: '50px' }}
                 >
                     くじを引く
                 </button>
