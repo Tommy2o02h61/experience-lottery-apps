@@ -11,7 +11,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
     return (
         <div className="w-full max-w-6xl p-2 animate-fade-in-up">
             <h2 className="text-3xl font-bold text-slate-800 text-center mb-10 drop-shadow-sm tracking-widest">
-                EXPERIENCE LOTTERY <span className="text-sm font-normal text-slate-500 block mt-2">v1.4</span>
+                EXPERIENCE LOTTERY <span className="text-sm font-normal text-slate-500 block mt-2">v1.5</span>
             </h2>
 
             {/* 
