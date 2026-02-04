@@ -11,7 +11,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
     return (
         <div className="w-full max-w-6xl p-2 animate-fade-in-up">
             <h2 className="text-3xl font-bold text-slate-800 text-center mb-10 drop-shadow-sm tracking-widest">
-                EXPERIENCE LOTTERY <span className="text-sm font-normal text-slate-500 block mt-2">v1.5</span>
+                EXPERIENCE LOTTERY <span className="text-sm font-normal text-slate-500 block mt-2">v1.6</span>
             </h2>
 
             {/* 
@@ -21,7 +21,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
       */}
             <div
                 className="flex flex-col md:flex-row justify-center gap-8 md:gap-8 items-stretch"
-                style={{ marginBottom: '80px' }}
+                style={{ marginBottom: '20px' }}
             >
 
                 {/* Card 1: Mood */}
@@ -38,7 +38,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
-                                style={{ height: '120px' }}
+                                style={{ height: '60px' }}
                             >
                                 {mood.label}
                             </button>
@@ -60,7 +60,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
-                                style={{ height: '120px' }}
+                                style={{ height: '60px' }}
                             >
                                 {time.label}
                             </button>
@@ -82,7 +82,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
-                                style={{ height: '120px' }}
+                                style={{ height: '60px' }}
                             >
                                 {location.label}
                             </button>
