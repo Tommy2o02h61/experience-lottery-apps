@@ -42,15 +42,15 @@ export default function ResultCards({ results, onReset }) {
                             transitionDelay: `${index * 200}ms`,
                             minHeight: '400px',
                             // removed inline maxWidth to control via classes
-                            padding: '2rem 1.5rem'
+                            padding: '1rem 0.5rem'
                         }}
                     >
                         {/* Badge / Header */}
-                        <div className="mb-6 w-full">
-                            <span className="inline-block px-3 py-1 bg-[#FFFdeb] text-[#d98c50] text-xs font-bold tracking-widest uppercase mb-4 border border-[#FFB978]/30">
+                        <div className="mb-4 w-full">
+                            <span className="inline-block px-3 py-1 bg-[#FFFdeb] text-[#d98c50] text-xs font-bold tracking-widest uppercase mb-2 border border-[#FFB978]/30">
                                 NO. {index + 1}
                             </span>
-                            <h3 className="text-lg md:text-xl font-bold leading-snug text-slate-900 border-b-2 border-[#FFB978]/20 pb-4 mx-2">
+                            <h3 className="text-lg md:text-xl font-bold leading-snug text-slate-900 border-b-2 border-[#FFB978]/20 pb-2 mx-2">
                                 {item.title}
                             </h3>
                         </div>
@@ -61,7 +61,7 @@ export default function ResultCards({ results, onReset }) {
                         </p>
 
                         {/* Footer */}
-                        <div className="mt-8 pt-4 w-full border-t border-dashed border-slate-300">
+                        <div className="mt-4 pt-2 w-full border-t border-dashed border-slate-300">
                             <span className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-wider block">
                                 CATEGORY
                             </span>
@@ -73,18 +73,18 @@ export default function ResultCards({ results, onReset }) {
                 ))}
             </div>
 
-            <div className="text-center mt-[85px]">
+            <div className="text-center mt-[20px]">
                 <button
                     onClick={onReset}
                     className="
-                        w-[90%] md:w-[32%] min-w-[300px]
-                        py-6 md:py-6
-                        rounded-full font-bold text-3xl md:text-4xl
+                        w-[54%] md:w-[32%] min-w-[180px]
+                        py-4 md:py-6
+                        rounded-full font-bold text-xl md:text-4xl
                         bg-[#FFDAB8] hover:bg-[#FFB978] text-slate-900 
                         transition-all shadow-xl transform border-4 border-[#FFB978] tracking-widest
                         hover:scale-[1.02] hover:-translate-y-1 active:scale-95
                     "
-                    style={{ minHeight: '85px' }}
+                    style={{ minHeight: '50px' }}
                 >
                     もう一度引く
                 </button>
