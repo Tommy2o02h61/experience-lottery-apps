@@ -34,10 +34,11 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                             <button
                                 key={mood.id}
                                 onClick={() => handleChange('mood', mood.id)}
-                                className={`h-[120px] md:h-auto md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.mood === mood.id
+                                className={`md:h-auto md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.mood === mood.id
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
+                                style={{ height: '120px' }}
                             >
                                 {mood.label}
                             </button>
@@ -55,10 +56,11 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                             <button
                                 key={time.id}
                                 onClick={() => handleChange('time', time.id)}
-                                className={`h-[120px] md:h-auto md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.time === time.id
+                                className={`md:h-auto md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.time === time.id
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
+                                style={{ height: '120px' }}
                             >
                                 {time.label}
                             </button>
@@ -76,10 +78,11 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                             <button
                                 key={location.id}
                                 onClick={() => handleChange('location', location.id)}
-                                className={`h-[120px] md:h-auto md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.location === location.id
+                                className={`md:h-auto md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.location === location.id
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
+                                style={{ height: '120px' }}
                             >
                                 {location.label}
                             </button>
