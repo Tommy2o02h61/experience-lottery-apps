@@ -15,9 +15,9 @@ export default function ResultCards({ results, onReset }) {
             </h2>
 
             {/* 
-        Force 3 columns horizontal layout 
+        Force 3 columns horizontal layout on desktop, Vertical on mobile
       */}
-            <div className="flex flex-row justify-center gap-4 md:gap-8 mb-12 items-stretch">
+            <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-8 mb-12 items-center md:items-stretch">
                 {results.map((item, index) => (
                     <div
                         key={index}
@@ -35,12 +35,13 @@ export default function ResultCards({ results, onReset }) {
               /* Added thin orange border around the whole card as requested */
               border-l border-r border-b border-[#FFB978]/50
               relative
+              w-full max-w-sm md:max-w-[300px]
               ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}
             `}
                         style={{
                             transitionDelay: `${index * 200}ms`,
                             minHeight: '400px',
-                            maxWidth: '300px',
+                            // removed inline maxWidth to control via classes
                             padding: '2rem 1.5rem'
                         }}
                     >

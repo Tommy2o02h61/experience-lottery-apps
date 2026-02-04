@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center p-4 overflow-hidden relative"
+      className="min-h-screen flex items-center justify-center p-4 overflow-x-hidden overflow-y-auto relative"
       style={{
         backgroundColor: '#FFFdeb',
         backgroundImage: encodedPattern,

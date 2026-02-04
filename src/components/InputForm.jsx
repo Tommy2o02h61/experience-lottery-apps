@@ -17,9 +17,10 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
             {/* 
         Cards Container 
         Gap adjusted to ~80px (approx 1 button height)
+        Responsive: Stack vertically on mobile, horizontal on md+
       */}
             <div
-                className="flex flex-row justify-center gap-4 md:gap-8 items-stretch"
+                className="flex flex-col md:flex-row justify-center gap-8 md:gap-8 items-stretch"
                 style={{ marginBottom: '80px' }}
             >
 
@@ -33,9 +34,9 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                             <button
                                 key={mood.id}
                                 onClick={() => handleChange('mood', mood.id)}
-                                className={`py-2 px-1 rounded-md text-xl md:text-2xl transition-all duration-200 w-full h-full flex items-center justify-center font-bold shadow-sm border ${criteria.mood === mood.id
-                                        ? 'bg-[#FFB978] text-white border-[#FFB978]'
-                                        : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
+                                className={`py-4 md:py-2 px-1 rounded-md text-lg md:text-2xl transition-all duration-200 w-full h-full flex items-center justify-center font-bold shadow-sm border ${criteria.mood === mood.id
+                                    ? 'bg-[#FFB978] text-white border-[#FFB978]'
+                                    : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
                             >
                                 {mood.label}
@@ -54,9 +55,9 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                             <button
                                 key={time.id}
                                 onClick={() => handleChange('time', time.id)}
-                                className={`py-2 px-1 rounded-md text-xl md:text-2xl transition-all duration-200 w-full h-full flex items-center justify-center font-bold shadow-sm border ${criteria.time === time.id
-                                        ? 'bg-[#FFB978] text-white border-[#FFB978]'
-                                        : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
+                                className={`py-4 md:py-2 px-1 rounded-md text-lg md:text-2xl transition-all duration-200 w-full h-full flex items-center justify-center font-bold shadow-sm border ${criteria.time === time.id
+                                    ? 'bg-[#FFB978] text-white border-[#FFB978]'
+                                    : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
                             >
                                 {time.label}
@@ -75,9 +76,9 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                             <button
                                 key={location.id}
                                 onClick={() => handleChange('location', location.id)}
-                                className={`py-2 px-1 rounded-md text-xl md:text-2xl transition-all duration-200 w-full h-full flex items-center justify-center font-bold shadow-sm border ${criteria.location === location.id
-                                        ? 'bg-[#FFB978] text-white border-[#FFB978]'
-                                        : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
+                                className={`py-4 md:py-2 px-1 rounded-md text-lg md:text-2xl transition-all duration-200 w-full h-full flex items-center justify-center font-bold shadow-sm border ${criteria.location === location.id
+                                    ? 'bg-[#FFB978] text-white border-[#FFB978]'
+                                    : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
                             >
                                 {location.label}
@@ -92,8 +93,8 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                     onClick={onStart}
                     disabled={!isFormValid}
                     className={`
-             w-[32%] min-w-[300px]
-             py-4 md:py-6
+             w-[90%] md:w-[32%] min-w-[300px]
+             py-6 md:py-6
             rounded-full font-bold text-3xl md:text-4xl
             shadow-xl transition-all duration-300 transform border-4 tracking-widest
             ${isFormValid
