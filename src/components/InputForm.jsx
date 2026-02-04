@@ -11,7 +11,7 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
     return (
         <div className="w-full max-w-6xl p-2 animate-fade-in-up">
             <h2 className="text-3xl font-bold text-slate-800 text-center mb-10 drop-shadow-sm tracking-widest">
-                EXPERIENCE LOTTERY <span className="text-sm font-normal text-slate-500 block mt-2">v1.1</span>
+                EXPERIENCE LOTTERY <span className="text-sm font-normal text-slate-500 block mt-2">v1.2</span>
             </h2>
 
             {/* 
@@ -25,16 +25,16 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
             >
 
                 {/* Card 1: Mood */}
-                <div className="flex-1 bg-[#fefefe] text-slate-800 rounded-sm shadow-lg flex flex-col items-center border-t-8 border-[#FFB978] border-l border-r border-b border-[#FFB978]/50 p-4 md:p-6 relative min-h-[350px]">
-                    <h3 className="text-lg md:text-xl font-bold text-slate-900 border-b-2 border-[#FFB978]/20 pb-4 mb-6 w-full text-center">
+                <div className="flex-1 bg-[#fefefe] text-slate-800 rounded-sm shadow-lg flex flex-col items-center border-t-8 border-[#FFB978] border-l border-r border-b border-[#FFB978]/50 p-3 md:p-6 relative">
+                    <h3 className="text-base md:text-xl font-bold text-slate-900 border-b-2 border-[#FFB978]/20 pb-2 md:pb-4 mb-3 md:mb-6 w-full text-center">
                         今の気分
                     </h3>
-                    <div className="grid grid-cols-2 gap-3 w-full flex-grow">
+                    <div className="grid grid-cols-2 gap-2 md:gap-3 w-full flex-grow">
                         {MOODS.map(mood => (
                             <button
                                 key={mood.id}
                                 onClick={() => handleChange('mood', mood.id)}
-                                className={`py-4 md:py-2 px-1 rounded-md text-lg md:text-2xl transition-all duration-200 w-full h-full flex items-center justify-center font-bold shadow-sm border ${criteria.mood === mood.id
+                                className={`py-3 md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.mood === mood.id
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
@@ -46,16 +46,16 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                 </div>
 
                 {/* Card 2: Time */}
-                <div className="flex-1 bg-[#fefefe] text-slate-800 rounded-sm shadow-lg flex flex-col items-center border-t-8 border-[#FFB978] border-l border-r border-b border-[#FFB978]/50 p-4 md:p-6 relative min-h-[350px]">
-                    <h3 className="text-lg md:text-xl font-bold text-slate-900 border-b-2 border-[#FFB978]/20 pb-4 mb-6 w-full text-center">
+                <div className="flex-1 bg-[#fefefe] text-slate-800 rounded-sm shadow-lg flex flex-col items-center border-t-8 border-[#FFB978] border-l border-r border-b border-[#FFB978]/50 p-3 md:p-6 relative">
+                    <h3 className="text-base md:text-xl font-bold text-slate-900 border-b-2 border-[#FFB978]/20 pb-2 md:pb-4 mb-3 md:mb-6 w-full text-center">
                         確保できる時間
                     </h3>
-                    <div className="grid grid-cols-2 gap-3 w-full flex-grow">
+                    <div className="grid grid-cols-2 gap-2 md:gap-3 w-full flex-grow">
                         {TIME_LIMITS.map(time => (
                             <button
                                 key={time.id}
                                 onClick={() => handleChange('time', time.id)}
-                                className={`py-4 md:py-2 px-1 rounded-md text-lg md:text-2xl transition-all duration-200 w-full h-full flex items-center justify-center font-bold shadow-sm border ${criteria.time === time.id
+                                className={`py-3 md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.time === time.id
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}
@@ -67,16 +67,16 @@ export default function InputForm({ criteria, setCriteria, onStart }) {
                 </div>
 
                 {/* Card 3: Location */}
-                <div className="flex-1 bg-[#fefefe] text-slate-800 rounded-sm shadow-lg flex flex-col items-center border-t-8 border-[#FFB978] border-l border-r border-b border-[#FFB978]/50 p-4 md:p-6 relative min-h-[350px]">
-                    <h3 className="text-lg md:text-xl font-bold text-slate-900 border-b-2 border-[#FFB978]/20 pb-4 mb-6 w-full text-center">
+                <div className="flex-1 bg-[#fefefe] text-slate-800 rounded-sm shadow-lg flex flex-col items-center border-t-8 border-[#FFB978] border-l border-r border-b border-[#FFB978]/50 p-3 md:p-6 relative">
+                    <h3 className="text-base md:text-xl font-bold text-slate-900 border-b-2 border-[#FFB978]/20 pb-2 md:pb-4 mb-3 md:mb-6 w-full text-center">
                         今の場所
                     </h3>
-                    <div className="grid grid-cols-2 gap-3 w-full flex-grow">
+                    <div className="grid grid-cols-2 gap-2 md:gap-3 w-full flex-grow">
                         {LOCATIONS.map(location => (
                             <button
                                 key={location.id}
                                 onClick={() => handleChange('location', location.id)}
-                                className={`py-4 md:py-2 px-1 rounded-md text-lg md:text-2xl transition-all duration-200 w-full h-full flex items-center justify-center font-bold shadow-sm border ${criteria.location === location.id
+                                className={`py-3 md:py-2 px-1 rounded-md text-base md:text-2xl transition-all duration-200 w-full flex items-center justify-center font-bold shadow-sm border ${criteria.location === location.id
                                     ? 'bg-[#FFB978] text-white border-[#FFB978]'
                                     : 'bg-[#FFFdeb] text-slate-700 border-[#FFB978]/20 hover:bg-[#FFDAB8]'
                                     }`}

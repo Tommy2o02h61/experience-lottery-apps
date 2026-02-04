@@ -73,10 +73,18 @@ export default function ResultCards({ results, onReset }) {
                 ))}
             </div>
 
-            <div className="text-center">
+            <div className="text-center mt-[85px]">
                 <button
                     onClick={onReset}
-                    className="px-8 py-3 bg-[#FFDAB8] hover:bg-[#FFB978] text-slate-900 rounded-full font-bold transition-all shadow-md transform hover:scale-105 active:scale-95 border border-[#FFB978]/30"
+                    className="
+                        w-[90%] md:w-[32%] min-w-[300px]
+                        py-6 md:py-6
+                        rounded-full font-bold text-3xl md:text-4xl
+                        bg-[#FFDAB8] hover:bg-[#FFB978] text-slate-900 
+                        transition-all shadow-xl transform border-4 border-[#FFB978] tracking-widest
+                        hover:scale-[1.02] hover:-translate-y-1 active:scale-95
+                    "
+                    style={{ minHeight: '85px' }}
                 >
                     もう一度引く
                 </button>
